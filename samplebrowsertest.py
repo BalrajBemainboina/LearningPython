@@ -30,14 +30,6 @@ capabilities = [
         "sessionName": "FirefoxBrowser",
         "buildName": BUILD_NAME,
     },
-    {
-        "browserName": "safari",
-        "browserVersion": "14.1",
-        "os": "OS X",
-        "osVersion": "Big Sur",
-        "sessionName": "SafariBrowser",
-        "buildName": BUILD_NAME,
-    },
 ]
 def get_browser_option(browser):
     switcher = {
