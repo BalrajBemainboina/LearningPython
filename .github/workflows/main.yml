@@ -27,3 +27,5 @@ jobs:
           sudo pip install selenium==4.1.0
           python -m pip install python-dotenv
           python --version
+      - name: Start BrowserStack Test
+        run: python samplebrowsertest.py
