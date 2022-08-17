@@ -55,6 +55,7 @@ def run_session(cap):
     elem = driver.find_element(By.LINK_TEXT, "India (English)")
     elem.click()
     driver.find_element_by_css_selector("button[ng-click='vm.confirm(vm.selectedCountry)']").click()
+    driver.find_element_by_css_selector("button[ng-click='vm.close()']").click()
     try:
         WebDriverWait(driver, 5).until(EC.title_contains("myPKFiT"))
         driver.execute_script(
