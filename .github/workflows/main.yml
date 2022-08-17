@@ -22,7 +22,8 @@ jobs:
   
 
       # Runs a set of commands using the runners shell
-      - name: Install selenium oython-dotenv
+      - name: Install selenium python-dotenv
         run: |
           sudo pip install selenium==4.1.0
           python -m pip install python-dotenv
+          python --version
