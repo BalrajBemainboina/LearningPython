@@ -10,6 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from threading import Thread
+import time
 # This array 'capabilities' defines the capabilities browser, device and OS combinations where the test will run
 load_dotenv()
 BUILD_NAME = "browserstack-mypkfitTest"
@@ -52,9 +53,11 @@ def run_session(cap):
     driver.get("https://sg-prd-hema.mypkfit.com")
     if not "myPKFiT" in driver.title:
         raise Exception("Unable to load myPKFiT page!")
+    driver.maximize_window()
     elem = driver.find_element(By.LINK_TEXT, "India (English)")
     elem.click()
     driver.find_element_by_css_selector("button[ng-click='vm.confirm(vm.selectedCountry)']").click()
+    time.sleep(20)
     driver.find_element_by_css_selector("button[ng-click='vm.close()']").click()
     try:
         WebDriverWait(driver, 5).until(EC.title_contains("myPKFiT"))
