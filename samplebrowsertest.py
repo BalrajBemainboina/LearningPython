@@ -54,6 +54,8 @@ def run_session(cap):
         raise Exception("Unable to load myPKFiT page!")
     elem = driver.find_element(By.LINK_TEXT, "India (English)")
     elem.click()
+    elem = driver.find_element(By.CSS_SELECTOR, "ng-click=//"vm.confirm(vm.selectedCountry)//"")
+    elem.click();
     try:
         WebDriverWait(driver, 5).until(EC.title_contains("myPKFiT"))
         driver.execute_script(
