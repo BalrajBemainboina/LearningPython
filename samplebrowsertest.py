@@ -12,14 +12,14 @@ from selenium.common.exceptions import TimeoutException
 from threading import Thread
 # This array 'capabilities' defines the capabilities browser, device and OS combinations where the test will run
 load_dotenv()
-BUILD_NAME = "browserstack-build-1"
+BUILD_NAME = "browserstack-mypkfitTest"
 capabilities = [
     {
         "browserName": "chrome",
         "browserVersion": "103.0",
         "os": "Windows",
         "osVersion": "11",
-        "sessionName": "Parallel Test 1",  # test name
+        "sessionName": "ChromeBrowser",  # test name
         "buildName": BUILD_NAME,  # Your tests will be organized within this build
     },
     {
@@ -27,7 +27,7 @@ capabilities = [
         "browserVersion": "102.0",
         "os": "Windows",
         "osVersion": "10",
-        "sessionName": "Parallel Test 2",
+        "sessionName": "FirefoxBrowser",
         "buildName": BUILD_NAME,
     },
     {
@@ -35,7 +35,7 @@ capabilities = [
         "browserVersion": "14.1",
         "os": "OS X",
         "osVersion": "Big Sur",
-        "sessionName": "Parallel Test 3",
+        "sessionName": "SafariBrowser",
         "buildName": BUILD_NAME,
     },
 ]
@@ -57,14 +57,13 @@ def run_session(cap):
     driver = webdriver.Remote(
         command_executor="https://hub.browserstack.com/wd/hub", options=options
     )
-    driver.get("https://www.duckduckgo.com")
-    if not "DuckDuckGo" in driver.title:
-        raise Exception("Unable to load duckduckgo page!")
-    elem = driver.find_element(By.NAME, "q")
-    elem.send_keys("BrowserStack")
-    elem.submit()
+    driver.get("https://sg-prd-hema.mypkfit.com")
+    if not "myPKFiT" in driver.title:
+        raise Exception("Unable to load myPKFiT page!")
+    elem = driver.find_element(By.LINK_TEXT, "India (English)")
+    elem.click()
     try:
-        WebDriverWait(driver, 5).until(EC.title_contains("BrowserStack"))
+        WebDriverWait(driver, 5).until(EC.title_contains("myPKFiT"))
         driver.execute_script(
             'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed", "reason": "Title matched!"}}'
         )
