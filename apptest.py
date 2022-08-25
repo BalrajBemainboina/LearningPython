@@ -42,7 +42,7 @@ elements_list = driver.find_elements_by_class_name("android.widget.TextView")
         print(element.text + 'Selected') 
 time.sleep(2)
 elements_list = driver.find_elements_by_class_name("android.widget.TextView")
-for element in elements_list:
+    for element in elements_list:
     if 'Sign Up' in element.text: 
         element.click()
         print(element.text + 'Selected')
