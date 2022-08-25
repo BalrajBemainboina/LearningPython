@@ -49,13 +49,7 @@ for element1 in elements_listsign:
         element1.click()
         print('Sign Up' + ' Selected')
         break
-time.sleep(4)
-elements_listhome = driver.find_elements_by_class_name("android.widget.TextView")
-for element2 in elements_listhome:
-    if 'Cancel' in element2.text: 
-        element2.click()
-        print('backtoLogin' + ' Selected')
-        break
+
 # If you have uploaded your app, write your test case here. 
 time.sleep(2) 
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
