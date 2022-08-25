@@ -28,7 +28,12 @@ driver = webdriver.Remote(
     command_executor="http://hub-cloud.browserstack.com/wd/hub", 
     desired_capabilities=desired_cap
 )
-  
+time.sleep(5)
+search_element = WebDriverWait(driver, 20).until(
+    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Contact Us"))
+)
+search_element.click()
+
 # If you have uploaded your app, write your test case here. 
 time.sleep(10) 
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
