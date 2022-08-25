@@ -29,7 +29,9 @@ driver = webdriver.Remote(
     desired_capabilities=desired_cap
 )
 time.sleep(10)
-driver.find_element(:link_text, 'Contact Us').click()
+driver.find_element(By.LINK_TEXT, "Contact Us")).click()
+time.sleep(5) 
+driver.find_element(By.LINK_TEXT, "Cancel")).click()
 # If you have uploaded your app, write your test case here. 
 time.sleep(5) 
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
