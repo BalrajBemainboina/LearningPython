@@ -28,6 +28,13 @@ driver = webdriver.Remote(
     command_executor="http://hub-cloud.browserstack.com/wd/hub", 
     desired_capabilities=desired_cap
 )
+@Test
+public void testCal() throws Exception {
+   //locate the Text on the calculator by using By.name()
+   WebElement two=driver.findElement(By.name("Contact Us"));
+   two.click();
+
+}
   
 # If you have uploaded your app, write your test case here. 
 time.sleep(20) 
