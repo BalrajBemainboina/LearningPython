@@ -28,9 +28,9 @@ driver = webdriver.Remote(
     command_executor="http://hub-cloud.browserstack.com/wd/hub", 
     desired_capabilities=desired_cap
 )
-time.sleep(10)
-driver.find_element(MobileBy.ACCESSIBILITY_ID,'Contact Us').click()
-time.sleep(5) 
+time.sleep(15)
+driver.find_element(MobileBy.ACCESSIBILITY_ID, 'Contact Us').click()
+time.sleep(15) 
 driver.find_element(MobileBy.ACCESSIBILITY_ID, 'Cancel').click()
 # If you have uploaded your app, write your test case here. 
 time.sleep(5) 
