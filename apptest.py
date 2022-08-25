@@ -30,6 +30,6 @@ driver = webdriver.Remote(
 )
   
 # If you have uploaded your app, write your test case here. 
-  
+ time.sleep(20) 
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
