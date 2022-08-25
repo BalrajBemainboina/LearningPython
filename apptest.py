@@ -28,13 +28,25 @@ driver = webdriver.Remote(
     command_executor="http://hub-cloud.browserstack.com/wd/hub", 
     desired_capabilities=desired_cap
 )
-time.sleep(10)
+time.sleep(5)
 elements_list = driver.find_elements_by_class_name("android.widget.TextView")
 for element in elements_list:
     if 'Contact Us' in element.text: 
         element.click()
-        print(element.text)
+        print(element.text + 'Selected')
+time.sleep(2)
+elements_list = driver.find_elements_by_class_name("android.widget.TextView")
+    for element in elements_list:
+    if 'Cancel' in element.text: 
+        element.click()
+        print(element.text + 'Selected') 
+time.sleep(2)
+elements_list = driver.find_elements_by_class_name("android.widget.TextView")
+for element in elements_list:
+    if 'Sign Up' in element.text: 
+        element.click()
+        print(element.text + 'Selected')
 # If you have uploaded your app, write your test case here. 
-time.sleep(5) 
+time.sleep(3) 
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
