@@ -31,9 +31,9 @@ driver = webdriver.Remote(
 time.sleep(10)
 elements_list = driver.find_elements_by_class_name("android.widget.TextView")
 for element in elements_list:
-    if 'Contact Us' in str(element.get_attribute("text")): 
+    if 'Contact Us' in element.text: 
         element.click()
-        print(element.text())
+        print(element.text)
 # If you have uploaded your app, write your test case here. 
 time.sleep(5) 
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
