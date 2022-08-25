@@ -13,13 +13,13 @@ desired_cap = {
     "app" : "bs://8fbaceffe5698a25811544ebfc3c14f9d12d4743",
   
     # Specify device and os_version for testing
-    "device" : "Google Pixel 3",
+    "device" : "Samsung Galaxy S22",
     "os_version" : "9.0",
       
     # Set other BrowserStack capabilities
     "project" : "First Python project", 
     "build" : "browserstack-build-1",
-    "name" : "first_test"
+    "name" : "myPKFitAppTest"
 }
   
 # Initialize the remote Webdriver using BrowserStack remote URL
@@ -42,7 +42,7 @@ for element in elements_listCancel:
         element.click()
         break
         print('Cancel' + ' Selected')
-time.sleep(3)
+time.sleep(2)
 elements_listsign = driver.find_elements_by_class_name("android.widget.TextView")
 for element1 in elements_listsign:
     print (element1.text)
@@ -50,6 +50,12 @@ for element1 in elements_listsign:
         element1.click()
         break
         print('Sign Up' + ' Selected')
+time.sleep(2)
+for element in elements_listCancel:
+    if 'Cancel' in element.text: 
+        element.click()
+        break
+        print('Cancel' + ' Selected')
 # If you have uploaded your app, write your test case here. 
 time.sleep(2) 
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
