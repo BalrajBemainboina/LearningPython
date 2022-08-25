@@ -40,12 +40,12 @@ for element in elements_listCancel:
     if 'Cancel' in element.text: 
         element.click()
         print('Cancel' + ' Selected')
-time.sleep(2)
+time.sleep(3)
 elements_listsign = driver.find_elements_by_class_name("android.widget.TextView")
-for element in elements_listsign:
-    print (element.text)
-    if 'Sign Up' in element.text: 
-        element.click()
+for element1 in elements_listsign:
+    print (element1.text)
+    if 'Sign Up' in element1.text: 
+        element1.click()
         print('Sign Up' + ' Selected')
 # If you have uploaded your app, write your test case here. 
 time.sleep(2) 
