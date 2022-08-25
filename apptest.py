@@ -29,9 +29,8 @@ driver = webdriver.Remote(
     desired_capabilities=desired_cap
 )
 time.sleep(5)
-search_element = WebDriverWait(driver, 20).until(
-    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Contact Us"))
-)
+search_element=EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Contact Us"))
+
 search_element.click()
 
 # If you have uploaded your app, write your test case here. 
