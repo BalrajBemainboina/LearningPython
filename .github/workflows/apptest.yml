@@ -22,9 +22,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: checkout appium 
         run: |
-          sudo pip install selenium==4.1.0
           sudo pip install Appium-Python-Client
-          python -m pip install python-dotenv
-          python --version
       - name: Start BrowserStack mypkfit App Test
-        run: python apptest.py
+        run: python3 apptest.py
