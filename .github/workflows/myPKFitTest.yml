@@ -26,4 +26,4 @@ jobs:
           cd python-appium-app-browserstack
           pip3 install -r requirements.txt
       - name: Start BrowserStack mypkfit App Test
-        run: python apptest.py
+        run: python myPKFitApptest.py
