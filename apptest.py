@@ -28,8 +28,9 @@ driver = webdriver.Remote(
     command_executor="http://hub-cloud.browserstack.com/wd/hub", 
     desired_capabilities=desired_cap
 )
-
+time.sleep(10)
+driver.find_element(:link_text, 'Contact Us').click()
 # If you have uploaded your app, write your test case here. 
-time.sleep(15) 
+time.sleep(5) 
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
