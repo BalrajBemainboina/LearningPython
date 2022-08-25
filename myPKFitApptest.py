@@ -35,21 +35,21 @@ for element in elements_list:
         element.click()
         print(element.text + ' Selected')
         break
-time.sleep(3)
+time.sleep(4)
 elements_listCancel = driver.find_elements_by_class_name("android.widget.TextView")
 for element in elements_listCancel:
     if 'Cancel' in element.text: 
         element.click()
         print('Cancel' + ' Selected')
         break
-time.sleep(3)
+time.sleep(4)
 elements_listsign = driver.find_elements_by_class_name("android.widget.TextView")
 for element1 in elements_listsign:
     if 'Sign Up' in element1.text: 
         element1.click()
         print('Sign Up' + ' Selected')
         break
-time.sleep(2)
+time.sleep(4)
 elements_listhome = driver.find_elements_by_class_name("android.widget.TextView")
 for element2 in elements_listhome:
     if 'Cancel' in element2.text: 
