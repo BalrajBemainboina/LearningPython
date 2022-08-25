@@ -20,10 +20,10 @@ jobs:
   
 
       # Runs a set of commands using the runners shell
-      - name: Install selenium python-dotenv
+      - name: checkout appium 
         run: |
-          sudo pip install selenium==4.1.0
-          python -m pip install python-dotenv
-          python --version
-      - name: Start BrowserStack Test
-        run: python samplebrowsertest.py
+          git clone https://github.com/browserstack/python-appium-app-browserstack
+          cp apptest.py python-appium-app-browserstack
+          ls python-appium-app-browserstack
+      - name: Start BrowserStack mypkfit App Test
+        run: python python-appium-app-browserstack/apptest.py
