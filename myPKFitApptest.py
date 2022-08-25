@@ -14,7 +14,7 @@ desired_cap = {
   
     # Specify device and os_version for testing
     "device" : "Samsung Galaxy S22",
-    "os_version" : "9.0",
+    "os_version" : "12.0",
       
     # Set other BrowserStack capabilities
     "project" : "First Python project", 
