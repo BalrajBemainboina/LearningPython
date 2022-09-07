@@ -36,7 +36,7 @@ for element in elements_list:
         print(element.text + ' Selected')
         break
 time.sleep(2)
-source = driver.page_source
+source = driver.getPageSource();
 print(source)
 # If you have uploaded your app, write your test case here. 
 time.sleep(2) 
