@@ -37,7 +37,7 @@ for element in elements_list:
         break
 time.sleep(2)
 source = driver.page_source
-print(source.text)
+print(source)
 # If you have uploaded your app, write your test case here. 
 time.sleep(2) 
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
