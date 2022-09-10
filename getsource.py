@@ -34,8 +34,9 @@ for element in elements_list:
     if 'Contact Us' in element.text: 
         element.click()
         break
-elements_list = driver.find_elements_by_class_name("android.widget.TextView")
-for element in elements_list:
+time.sleep(3)        
+contactus_elements_list = driver.find_elements_by_class_name("android.widget.TextView")
+for element in contactus_elements_list:
     print("Field" + ":" +  element.text)
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
