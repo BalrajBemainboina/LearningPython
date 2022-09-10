@@ -36,6 +36,6 @@ for element in elements_list:
         break
 elements_list = driver.find_elements_by_class_name("android.widget.TextView")
 for element in elements_list:
-    print("Field" + : +  element.text)
+    print("Field" + ":" +  element.text)
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
