@@ -33,12 +33,9 @@ elements_list = driver.find_elements_by_class_name("android.widget.TextView")
 for element in elements_list:
     if 'Contact Us' in element.text: 
         element.click()
-        print(element.text + ' Selected')
         break
-time.sleep(2)
-source = driver.getPageSource();
-print(source)
-# If you have uploaded your app, write your test case here. 
-time.sleep(2) 
+elements_list = driver.find_elements_by_class_name("android.widget.TextView")
+for element in elements_list:
+    print("Field" + : +  element.text)
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
